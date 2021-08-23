@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="18dp"
+    android:paddingLeft="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/commandeImageView"
+        android:layout_width="178dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/commandeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Maki Saumon"
+        android:textColor="@color/custom_black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/commandeImageView"
+        app:layout_constraintTop_toTopOf="@+id/commandeImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/commandePrice"
+        android:layout_width="125dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:text="70,00 MAD"
+        android:textColor="@color/custom_black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/commandeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/commandeTitle" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:background="#DBDBE0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commandePrice" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stateBtn"
+        android:includeFontPadding="false"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/green_rounded_button2"
+        android:text="EN ATTENTE"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commandeTitle"/>
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="68dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/commandeImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

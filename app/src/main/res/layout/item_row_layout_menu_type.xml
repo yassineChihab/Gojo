@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip android:id="@+id/menuChip"
+    android:layout_width="wrap_content"
+    android:layout_height="55dp"
+    app:chipCornerRadius="11dp"
+    android:paddingVertical="7dp"
+    android:paddingHorizontal="10dp"
+    style="@style/CustomChip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+</com.google.android.material.chip.Chip>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.VosCommandes">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vosCommandeRecycelerView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        tools:itemCount="4"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_row_layout_vos_commande"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/sushiRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/sushiRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/sushiRecyclerView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

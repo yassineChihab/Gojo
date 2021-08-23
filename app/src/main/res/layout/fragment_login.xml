@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".views.auth.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/TextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccpDialog_cornerRadius="8dp"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccp_autoDetectCountry="true"
+
+                app:ccp_hintExampleNumber="true" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/votre_num_ro_de_t_l_phone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:translationX="-5dp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/suivantBtn"
+            android:layout_width="341dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/black_rounded_edittext"
+            android:text="@string/suivant"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:translationY="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/TextPhoneNumber"
+            app:layout_constraintStart_toStartOf="@+id/TextPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/TextPhoneNumber" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/suivantBtn"
+            app:layout_constraintStart_toStartOf="@+id/suivantBtn"
+            app:layout_constraintTop_toBottomOf="@+id/suivantBtn">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:background="@color/custom_gray"
+                android:translationY="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/ou"
+                android:textColor="@color/custom_gray"
+                android:textSize="16sp"
+                android:translationY="5dp" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:background="@color/custom_gray"
+                android:translationY="4dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinueEmail"
+            android:layout_width="341dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/mail_ic"
+            android:drawableLeft="@drawable/mail_ic"
+            android:drawablePadding="20dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingLeft="19dp"
+            android:text="    Continuez avec Email  "
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:translationY="-5dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/socialLinearLayout"
+            android:layout_width="341dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:translationY="-5dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnContinueEmail"
+            app:layout_constraintStart_toStartOf="@+id/btnContinueEmail"
+            app:layout_constraintTop_toBottomOf="@+id/btnContinueEmail">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/facebook_sign_in_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/facebook_circular_ic"
+                android:drawablePadding="18dp"
+                android:gravity="start|center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/facebook"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:translationY="-2dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/google_sign_in_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/google_ic"
+                android:drawablePadding="18dp"
+                android:gravity="start|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/google"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:translationY="-2dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/socialLinearLayout"
+            app:layout_constraintStart_toStartOf="@+id/socialLinearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/socialLinearLayout">
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/cguTextView"
+            android:layout_width="372dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/en_continuant_vous_acceptez_nos_conditions_d_utilisation_et_notre_politique_de_confidentialit"
+            android:textColor="@color/custom_black"
+            android:translationY="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="427dp"
+        android:layout_height="286dp"
+        android:background="@drawable/curved_custom_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/chef_logo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.RepeteCommadne">
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/im_age" />
+
+    <ImageView
+            android:layout_width="428dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="300dp"
+            android:src="@drawable/tra_ce" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="310dp"
+            android:src="@drawable/review" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="320dp"
+            android:text="state" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="350dp"
+            android:text="date" />
+
+        <TextView
+            android:id="@+id/numCmd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="380dp"
+            android:text="num de commande" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="420dp"
+            android:fillViewport="true"
+            android:id="@+id/dragView"
+            android:clickable="true"
+            android:focusable="false">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Votre Commande"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+                        android:textColor="@color/custom_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/nbrCommande"
+                        android:layout_width="100dp"
+                        android:layout_height="21dp"
+                        android:layout_below="@id/textView4"
+                        android:layout_marginStart="28dp"
+                        android:text="nombre de sushi"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nbrCommande"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_row_layout_commande" />
+
+                    <ImageView
+                        android:id="@+id/imageiew3"
+                        android:layout_width="26dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/recyclerView"
+                        android:layout_marginStart="32dp"
+                        app:srcCompat="@drawable/place" />
+
+                    <TextView
+                        android:id="@+id/adrressLocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/recyclerView"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@id/imageiew3"
+                        android:text="TextView" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="26dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/imageiew3"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/trace" />
+
+                    <TextView
+                        android:id="@+id/adresse"
+                        android:layout_width="300dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@id/adrressLocal"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@id/imageView6"
+                        android:text="TextView"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toBottomOf="@+id/adrressLocal" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="138dp"
+                        android:layout_height="36dp"
+                        android:layout_below="@id/imageView6"
+                        android:layout_marginStart="20dp"
+                        android:text="Recapulatif"
+                        android:textColor="@color/custom_black"
+                        android:textSize="24dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="article"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/articleTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prixLivraison"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/r1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="livraison"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/deliveryCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/prixLivraison">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="total"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/RepeteCommande"
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/green_rounded_button"
+                    android:text="Répéter"
+                    android:textColor="@color/white" />
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+</FrameLayout>

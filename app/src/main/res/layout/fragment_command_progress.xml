@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    tools:context=".views.CommandProgress">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rec_angle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="405dp"
+            android:layout_height="1602dp"
+            android:background="@drawable/back_ground"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.484">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="369dp"
+                android:layout_height="211dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/rectan_glee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.416"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageVie6">
+
+
+            </View>
+
+            <TextView
+                android:id="@+id/textVie6"
+                android:layout_width="311dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="24dp"
+                android:text="Vous serez livrez dans"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="198dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="8dp"
+                android:text="29 minutes"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textVie6" />
+
+            <ImageView
+                android:id="@+id/imageVie6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/android_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="364dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="68dp"
+                android:text="On a reçu votre Commande!"
+                android:textColor="@color/custom_black"
+                android:textSize="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageVie6" />
+
+            <ProgressBar
+                android:id="@+id/progressBar9"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="340dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="164dp"
+                android:progressDrawable="@drawable/custom_progress_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="68dp"
+                android:src="@drawable/page"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="29dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/trace"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar9"
+                app:layout_constraintStart_toEndOf="@+id/imageView12" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/gro_upe"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar9"
+                app:layout_constraintStart_toEndOf="@+id/imageView13" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="28dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/grou_pe"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar9"
+                app:layout_constraintStart_toEndOf="@+id/imageView8" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/groupe"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/imageView9" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/back_arrow_ic"
+                app:layout_constraintEnd_toStartOf="@+id/textVie6"
+                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_remove_24" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/im_age" />
+
+        <ImageView
+            android:layout_width="428dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="330dp"
+            android:src="@drawable/tra_ce" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="340dp"
+            android:src="@drawable/review" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="350dp"
+            android:text="state" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="380dp"
+            android:text="date" />
+
+        <TextView
+            android:id="@+id/numCmd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="410dp"
+            android:text="num de commande" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="450dp"
+            android:fillViewport="true"
+            android:id="@+id/dragView"
+            android:clickable="true"
+            android:focusable="false">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Votre Commande"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+                        android:textColor="@color/custom_black"
+                         />
+
+                    <TextView
+                        android:id="@+id/nbrCommande"
+                        android:layout_width="100dp"
+                        android:layout_height="21dp"
+                        android:layout_below="@id/textView4"
+                        android:layout_marginStart="28dp"
+                        android:text="nombre de sushi"
+                       />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nbrCommande"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_row_layout_commande" />
+
+                    <ImageView
+                        android:id="@+id/imageiew3"
+                        android:layout_width="26dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/recyclerView"
+                        android:layout_marginStart="32dp"
+                        app:srcCompat="@drawable/place" />
+
+                    <TextView
+                        android:id="@+id/adrressLocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/recyclerView"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@id/imageiew3"
+                        android:text="TextView" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="26dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/imageiew3"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/trace" />
+
+                    <TextView
+                        android:id="@+id/adresse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/adrressLocal"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@id/imageView6"
+                        android:text="TextView"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toBottomOf="@+id/adrressLocal" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="138dp"
+                        android:layout_height="36dp"
+                        android:layout_below="@id/imageView6"
+                        android:layout_marginStart="20dp"
+                        android:text="Recapulatif"
+                        android:textColor="@color/custom_black"
+                        android:textSize="24dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="article"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/articleTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prixLivraison"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/r1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="livraison"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/deliveryCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/prixLivraison">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="total"
+                        android:textColor="@color/custom_black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="70dp"
+                        android:textColor="@color/custom_black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

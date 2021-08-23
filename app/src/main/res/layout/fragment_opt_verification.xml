@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_black"
+    tools:context=".views.auth.OtpVerificationFragment">
+
+    <TextView
+        android:id="@+id/tvVerficationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/v_rification_du_code"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPleaseTypeVerifCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvVerficationCode"
+        app:layout_constraintStart_toStartOf="@+id/tvVerficationCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerficationCode" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:cursorVisible="true"
+        android:inputType="phone"
+        android:itemBackground="@color/custom_gray"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/white"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="5"
+        app:itemHeight="48dp"
+        app:itemRadius="11dp"
+        app:itemSpacing="8dp"
+        app:itemWidth="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvPleaseTypeVerifCode"
+        app:layout_constraintStart_toStartOf="@+id/tvPleaseTypeVerifCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvPleaseTypeVerifCode"
+        app:lineColor="@color/custom_gray"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/pinView"
+        app:layout_constraintStart_toStartOf="@+id/pinView"
+        app:layout_constraintTop_toBottomOf="@+id/pinView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/didn_t_receive_the_verification"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_again"
+            android:textColor="@color/custom_green"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
