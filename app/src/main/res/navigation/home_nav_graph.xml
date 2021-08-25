@@ -283,6 +283,13 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
         <action
+            android:id="@+id/action_vosCommandeFragment_to_ProgressFragement"
+            app:destination="@id/fragmentProgress"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
             android:id="@+id/action_vosCommandeFragment_RepeteFragment"
             app:destination="@id/fragmentRepete"
             app:enterAnim="@anim/slide_in_right"

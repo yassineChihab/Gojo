@@ -11,6 +11,7 @@ import com.majjane.chefmajjane.utils.visible
 
 class vosCommadeAdapter(
     val onClick: (CommandeResponseNewItem, Int) -> Unit?,
+    val onClickV:(CommandeResponseNewItem,Int) ->Unit?,
     ): RecyclerView.Adapter<vosCommadeAdapter.CommandeViewHolder>() {
     var items = mutableListOf<CommandeResponseNewItem>()
     @JvmName("setItems1")
@@ -44,7 +45,12 @@ class vosCommadeAdapter(
             commandePrice.text = commande.total.toString()+" MAD"
 
             if(commande.order_status.name.equals("Validé")){
-                stateBtn.visible(false)
+                stateBtn.setOnClickListener{
+                    onClickV(commande,position)
+                }
+                commandeImageView.setOnClickListener{
+                    onClickV(commande,position)
+                }
             }else{
                 stateBtn.setOnClickListener{
                     onClick(commande,position)

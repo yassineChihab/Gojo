@@ -33,15 +33,21 @@ class VosCommandes
 
     private lateinit var navController: NavController
     lateinit var sharedViewModel: SharedViewModel
-  //  private var commande: List<CommandeResponse>? = null
-  private  val TAG = "VosCommandes"
+
+    //  private var commande: List<CommandeResponse>? = null
+    private val TAG = "VosCommandes"
     private val adapter by lazy {
-        vosCommadeAdapter({commande,position ->onCommandeClicked(commande, position)})
+        vosCommadeAdapter({ commande, position -> onCommandeClicked(commande, position) },
+            { commande, position -> onCommandeClickedV(commande, position) })
     }
 
-    private  fun onCommandeClicked(commande: CommandeResponseNewItem, position:Int){
-        val bundle= bundleOf(COMMANDE_BUNDLE to commande)
-        navController?.navigate(R.id.action_vosCommandeFragment_RepeteFragment,bundle)
+    private fun onCommandeClicked(commande: CommandeResponseNewItem, position: Int) {
+        val bundle = bundleOf(COMMANDE_BUNDLE to commande)
+        navController?.navigate(R.id.action_vosCommandeFragment_RepeteFragment, bundle)
+    }
+
+    private fun onCommandeClickedV(commande: CommandeResponseNewItem, position: Int) {
+        navController?.navigate(R.id.action_vosCommandeFragment_to_ProgressFragement)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,43 +71,40 @@ class VosCommandes
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        geCustomerOrder(1,preferences.getIdCustomer())
+        geCustomerOrder(1, preferences.getIdCustomer())
         ((activity) as HomeActivity).toolbarIcon?.setOnClickListener {
             navController.navigate(R.id.action_vosCommandeFragment_to_homeFragment)
         }
-        binding.vosCommandeRecycelerView.adapter=adapter
+        binding.vosCommandeRecycelerView.adapter = adapter
 
-       viewModel.allCommandeLiveData.observe(viewLifecycleOwner,{
-           when (it) {
-               is Resource.Loading -> {
-                   Log.d(TAG, "Loading ")
-                   binding.progressBar2.visible(true)
+        viewModel.allCommandeLiveData.observe(viewLifecycleOwner, {
+            when (it) {
+                is Resource.Loading -> {
+                    Log.d(TAG, "Loading ")
+                    binding.progressBar2.visible(true)
 
-               }
-               is Resource.Success -> {
-                   binding.progressBar2.visible(false)
+                }
+                is Resource.Success -> {
+                    binding.progressBar2.visible(false)
 
-                   Log.d(TAG, "data :${it.data}")
-                   adapter.setItems(it.data)
-               }
-               is Resource.Failure -> {
-                   binding.progressBar2.visible(false)
+                    Log.d(TAG, "data :${it.data}")
+                    adapter.setItems(it.data)
+                }
+                is Resource.Failure -> {
+                    binding.progressBar2.visible(false)
 
-                   handleApiError(it) {
+                    handleApiError(it) {
 
-                   }
-               }
-           }
-       })
-
-
-
+                    }
+                }
+            }
+        })
 
 
     }
 
     private fun geCustomerOrder(idLang: Int, idCutomer: Int) {
-         viewModel.getCustomerOrder(idLang = 1, idCutomer)
+        viewModel.getCustomerOrder(idLang = 1, idCutomer)
     }
 
 

@@ -6,55 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.RepeteCommadne">
 
-    <ImageView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:src="@drawable/im_age" />
-
-    <ImageView
-            android:layout_width="428dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="300dp"
-            android:src="@drawable/tra_ce" />
-
-        <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="310dp"
-            android:src="@drawable/review" />
-
-        <TextView
-            android:id="@+id/state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="320dp"
-            android:text="state" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="350dp"
-            android:text="date" />
-
-        <TextView
-            android:id="@+id/numCmd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="380dp"
-            android:text="num de commande" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:layout_marginTop="420dp"
             android:fillViewport="true"
             android:id="@+id/dragView"
             android:clickable="true"
@@ -66,6 +23,53 @@
                 android:orientation="vertical"
 
                 >
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/im_age" />
+
+                    <ImageView
+                        android:layout_width="428dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="300dp"
+                        android:src="@drawable/tra_ce" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="310dp"
+                        android:src="@drawable/review" />
+
+                    <TextView
+                        android:id="@+id/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="320dp"
+                        android:text="state" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="350dp"
+                        android:text="date" />
+
+                    <TextView
+                        android:id="@+id/numCmd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="380dp"
+                        android:text="num de commande" />
+                </FrameLayout>
 
 
                 <RelativeLayout
